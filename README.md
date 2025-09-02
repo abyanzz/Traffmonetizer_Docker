@@ -1,9 +1,9 @@
 # Traffmonetizer_Docker
 Aplikasi traffmonetizer yang bisa running 10 container dengan 1 container 1 proxy
 
-# === 0a. Prasyarat OS & Docker ===
 apt-get update -y
 apt-get install -y ca-certificates curl gnupg lsb-release iptables iproute2
+
 # Docker CE (resmi) – aman & stabil
 install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
