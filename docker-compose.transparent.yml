@@ -1,0 +1,133 @@
+cat >docker-compose.transparent.yml <<'EOF'
+services:
+  # === Worker 1 ===
+  tm_p1_tp:
+    image: alpine:3.19
+    command: ["/bin/sh","-lc","apk add --no-cache redsocks iptables iproute2 curl && /tp-entry.sh"]
+    environment:
+      - UPSTREAM=http://lupychue:giupuo4u1ot4@23.95.150.145:6114
+    volumes:
+      - ./tp-entry.sh:/tp-entry.sh:ro
+    cap_add: ["NET_ADMIN"]
+  tm_p1:
+    image: alpine:3.19
+    command: ["sh","-lc","apk add --no-cache wget curl && sleep infinity"]
+    network_mode: "service:tm_p1_tp"
+
+  # === Worker 2 ===
+  tm_p2_tp:
+    image: alpine:3.19
+    command: ["/bin/sh","-lc","apk add --no-cache redsocks iptables iproute2 curl && /tp-entry.sh"]
+    environment:
+      - UPSTREAM=http://lupychue:giupuo4u1ot4@198.23.239.134:6540
+    volumes: [ "./tp-entry.sh:/tp-entry.sh:ro" ]
+    cap_add: ["NET_ADMIN"]
+  tm_p2:
+    image: alpine:3.19
+    command: ["sh","-lc","apk add --no-cache wget curl && sleep infinity"]
+    network_mode: "service:tm_p2_tp"
+
+  # === Worker 3 ===
+  tm_p3_tp:
+    image: alpine:3.19
+    command: ["/bin/sh","-lc","apk add --no-cache redsocks iptables iproute2 curl && /tp-entry.sh"]
+    environment:
+      - UPSTREAM=http://lupychue:giupuo4u1ot4@45.38.107.97:6014
+    volumes: [ "./tp-entry.sh:/tp-entry.sh:ro" ]
+    cap_add: ["NET_ADMIN"]
+  tm_p3:
+    image: alpine:3.19
+    command: ["sh","-lc","apk add --no-cache wget curl && sleep infinity"]
+    network_mode: "service:tm_p3_tp"
+
+  # === Worker 4 ===
+  tm_p4_tp:
+    image: alpine:3.19
+    command: ["/bin/sh","-lc","apk add --no-cache redsocks iptables iproute2 curl && /tp-entry.sh"]
+    environment:
+      - UPSTREAM=http://lupychue:giupuo4u1ot4@107.172.163.27:6543
+    volumes: [ "./tp-entry.sh:/tp-entry.sh:ro" ]
+    cap_add: ["NET_ADMIN"]
+  tm_p4:
+    image: alpine:3.19
+    command: ["sh","-lc","apk add --no-cache wget curl && sleep infinity"]
+    network_mode: "service:tm_p4_tp"
+
+  # === Worker 5 ===
+  tm_p5_tp:
+    image: alpine:3.19
+    command: ["/bin/sh","-lc","apk add --no-cache redsocks iptables iproute2 curl && /tp-entry.sh"]
+    environment:
+      - UPSTREAM=http://lupychue:giupuo4u1ot4@64.137.96.74:6641
+    volumes: [ "./tp-entry.sh:/tp-entry.sh:ro" ]
+    cap_add: ["NET_ADMIN"]
+  tm_p5:
+    image: alpine:3.19
+    command: ["sh","-lc","apk add --no-cache wget curl && sleep infinity"]
+    network_mode: "service:tm_p5_tp"
+
+  # === Worker 6 ===
+  tm_p6_tp:
+    image: alpine:3.19
+    command: ["/bin/sh","-lc","apk add --no-cache redsocks iptables iproute2 curl && /tp-entry.sh"]
+    environment:
+      - UPSTREAM=http://lupychue:giupuo4u1ot4@45.43.186.39:6257
+    volumes: [ "./tp-entry.sh:/tp-entry.sh:ro" ]
+    cap_add: ["NET_ADMIN"]
+  tm_p6:
+    image: alpine:3.19
+    command: ["sh","-lc","apk add --no-cache wget curl && sleep infinity"]
+    network_mode: "service:tm_p6_tp"
+
+  # === Worker 7 ===
+  tm_p7_tp:
+    image: alpine:3.19
+    command: ["/bin/sh","-lc","apk add --no-cache redsocks iptables iproute2 curl && /tp-entry.sh"]
+    environment:
+      - UPSTREAM=http://lupychue:giupuo4u1ot4@154.203.43.247:5536
+    volumes: [ "./tp-entry.sh:/tp-entry.sh:ro" ]
+    cap_add: ["NET_ADMIN"]
+  tm_p7:
+    image: alpine:3.19
+    command: ["sh","-lc","apk add --no-cache wget curl && sleep infinity"]
+    network_mode: "service:tm_p7_tp"
+
+  # === Worker 8 ===
+  tm_p8_tp:
+    image: alpine:3.19
+    command: ["/bin/sh","-lc","apk add --no-cache redsocks iptables iproute2 curl && /tp-entry.sh"]
+    environment:
+      - UPSTREAM=http://lupychue:giupuo4u1ot4@216.10.27.159:6837
+    volumes: [ "./tp-entry.sh:/tp-entry.sh:ro" ]
+    cap_add: ["NET_ADMIN"]
+  tm_p8:
+    image: alpine:3.19
+    command: ["sh","-lc","apk add --no-cache wget curl && sleep infinity"]
+    network_mode: "service:tm_p8_tp"
+
+  # === Worker 9 ===
+  tm_p9_tp:
+    image: alpine:3.19
+    command: ["/bin/sh","-lc","apk add --no-cache redsocks iptables iproute2 curl && /tp-entry.sh"]
+    environment:
+      - UPSTREAM=http://lupychue:giupuo4u1ot4@136.0.207.84:6661
+    volumes: [ "./tp-entry.sh:/tp-entry.sh:ro" ]
+    cap_add: ["NET_ADMIN"]
+  tm_p9:
+    image: alpine:3.19
+    command: ["sh","-lc","apk add --no-cache wget curl && sleep infinity"]
+    network_mode: "service:tm_p9_tp"
+
+  # === Worker 10 ===
+  tm_p10_tp:
+    image: alpine:3.19
+    command: ["/bin/sh","-lc","apk add --no-cache redsocks iptables iproute2 curl && /tp-entry.sh"]
+    environment:
+      - UPSTREAM=http://lupychue:giupuo4u1ot4@142.147.128.93:6593
+    volumes: [ "./tp-entry.sh:/tp-entry.sh:ro" ]
+    cap_add: ["NET_ADMIN"]
+  tm_p10:
+    image: alpine:3.19
+    command: ["sh","-lc","apk add --no-cache wget curl && sleep infinity"]
+    network_mode: "service:tm_p10_tp"
+EOF
